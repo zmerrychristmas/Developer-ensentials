@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Authentcation"
+AuthUserFile /home/sunshine/public_html/git/ensentials/PHP-CURL/.htpasswd
+Require valid-user
