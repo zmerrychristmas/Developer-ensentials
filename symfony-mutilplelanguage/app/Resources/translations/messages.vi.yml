@@ -1,0 +1,22 @@
+module.schoolmanagement: Quản lý trường học
+module.courseeditor: Trình soạn thảo khóa học
+module.e-portfolio: E-Portfolio
+module.learningplatform: Nền tảng học tập
+module.eventsconferences: Sự kiện / Hội nghị
+module.onlineshop: Cửa hàng trực tuyến
+module.library: thư viện
+module.e-assessment: Đánh giá trực tuyến
+module.alumni: Cựu sinh viên
+module.plagiarism: Bộ dò đạo văn
+module.helpdesk: Hỗ trợ
+module.website: Trang mạng
+module.learning: Theo dõi xAPI
+module.booktype: Xuất bản sách
+module.external-tools: Công cụ của tôi
+user:
+  profile: 'Hồ sơ'
+  my_favourite: 'Mục ưa thích'
+  setting: 'Cài đặt'
+  sign_out: 'Đăng xuất'
+  my_tools: 'Công cụ của tôi'
+home: 'Trang chủ'

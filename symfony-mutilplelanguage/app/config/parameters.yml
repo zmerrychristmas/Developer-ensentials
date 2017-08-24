@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: mookeen
+    database_user: root
+    database_password: 1234567
+    mailer_transport: smtp
+    mailer_host: mx4.pentalog.fr
+    mailer_user: null
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+    from_email_address: huybinh.ad@gmail.com
+    from_email_sender_name: Mookeen

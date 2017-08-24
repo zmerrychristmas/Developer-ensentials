@@ -1,0 +1,13 @@
+users:
+  admin:
+    email: admin@test.dev
+    enabled: true
+    password: "@MooKeen2017"
+    roles:
+      - ROLE_SUPER_ADMIN
+  mookeendemo:
+    email: mookeendemo@test.dev
+    enabled: true
+    password: "@MooKeen2017"
+    roles:
+      - ROLE_USER

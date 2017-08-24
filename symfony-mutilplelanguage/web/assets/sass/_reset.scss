@@ -1,0 +1,24 @@
+.btn{
+  &:focus,&:active{
+    outline: none;
+  }
+}
+.btn-custom{
+  @include border-radius(18px);
+  &.btn-lg{
+    @include border-radius(25px);
+  }
+}
+.btn-primary{
+  color: #fff;
+  background-color: $primaryColor;
+  border-color: #2e6da4;
+}
+.btn-default{
+  color: #8d90b4;
+  background-color: #f2f2f2;
+  border-color: #8d90b4;
+}
+.btn-warning{
+  background-color: #ff7d03;
+}

@@ -1,0 +1,43 @@
+.course-list{
+  margin: 20px 0;
+}
+.course-item{
+  background: #ffffff;
+  @include border-radius(18px);
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  margin-left: -5px;
+  margin-right: -5px;
+  .course-info{
+    overflow: hidden;
+    .avatar-circle{
+      float: left;
+    }
+    .certificate{
+      margin-top: 15px;
+      margin-right: 15px;
+      float: right;
+      display: inline-block;
+      width: 40px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .course-name{
+    height: 72px;
+    margin-top: 15px;
+    .category{
+      color: #3a4259;
+      text-transform: uppercase;
+    }
+    h3{
+      margin: 0;
+      padding: 0;
+      a{
+        font-size: 24px;
+        color: $textColor;
+      }
+    }
+  }
+}
