@@ -1,0 +1,17 @@
+{
+  "name": "reactdir",
+  "version": "1.0.0",
+  "description": "Tutorial react",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -p"
+  },
+  "author": "Binh",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
+}
