@@ -23,3 +23,6 @@ The module for PHP that makes it possible for PHP programs to use libcurl.
 
 # Referencer
 - https://www.startutorial.com/articles/view/php-curl
+- PHP/CURL Book with Examples, http://curl.phptrack.com
+- http://php.net/manual/en/book.curl.php
+- https://en.wikipedia.org/wiki/CURL
