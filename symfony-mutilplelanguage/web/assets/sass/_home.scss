@@ -1,0 +1,45 @@
+#homePage{
+  .home-header{
+    .media{
+      .pull-left{
+        padding: 10px;
+        background: #ffffff;
+      }
+      .media-left{
+        padding-right: 5px;
+      }
+      .media-body{
+        background: url(../images/bg-home-header.png);
+        background-size: cover;
+        .media-heading{
+          color: #ffffff;
+          font-size: 28px;
+          font-weight: 500;
+          margin-left: 40px;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+  .social-networks{
+    margin-top: 30px;
+    .panel{
+      margin-top: 20px;
+      .panel-body{
+        position: relative;
+        .btn-group{
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+          .btn{
+            @include border-radius(0);
+          }
+        }
+      }
+    }
+    .social-cover{
+      border: 1px solid #dddddd;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+modules:
+  school_management:
+    languageKey: module.schoolmanagement
+    url: schoolmanagement.mookeen.dev/index.php?f=symfony
+    icon: fa-users
+    enabled: true
+    open_in: 1
+  course_editor:
+    languageKey: module.courseeditor
+    url: courseeditor.mookeen.dev
+    icon: fa-pencil
+    enabled: true
+    open_in: 1
+  e-portfolio:
+    languageKey: module.e-portfolio
+    url: e-portfolio.mookeen.dev
+    icon: fa-briefcase
+    enabled: true
+    open_in: 0
+  learning_platform:
+    languageKey: module.learningplatform
+    url: learningplatform.mookeen.dev
+    icon: fa-gamepad
+    enabled: true
+    open_in: 0
+  events_conferences:
+    languageKey: module.eventsconferences
+    url: events.mookeen.dev/wp-admin/
+    icon: fa-calendar
+    enabled: true
+    open_in: 1
+  online_shop:
+    languageKey: module.onlineshop
+    url: shop.mookeen.dev
+    icon: fa-shopping-basket
+    enabled: true
+    open_in: 1
+  library:
+    languageKey: module.library
+    url: schoolmanagement.mookeen.dev/index.php?q=/modules/Library/library_manage_catalog.php&f=symfony
+    icon: fa-floppy-o
+    enabled: true
+    open_in: 1
+  e-assessment:
+    languageKey: module.e-assessment
+    url: https://mk.bigbluebutton.ingenium-elearning.com
+    icon: fa-desktop
+    enabled: true
+    open_in: 1
+  alumni:
+    languageKey: module.alumni
+    url: schoolmanagement.mookeen.dev/index.php?q=/modules/Alumni/alumni_manage.php
+    icon: fa-mortar-board
+    enabled: true
+    open_in: 1
+  plagiarism_checker:
+    languageKey: module.plagiarism
+    url: schoolmanagement.mookeen.dev/mookeen.php?q=/modules/Mookeen/Plagiarims%20Checker/plagiarism_checker.php&f=symfony
+    icon: fa-exchange
+    enabled: true
+    open_in: 1
+  helpdesk:
+    languageKey: module.helpdesk
+    url: schoolmanagement.mookeen.dev/index.php?q=/modules/Help%20Desk/issues_view.php
+    icon: fa-headphones
+    enabled: true
+    open_in: 1
+  website:
+    languageKey: module.website
+    url: website.mookeen.dev/wp-admin/
+    icon: fa-window-maximize
+    enabled: true
+    open_in: 1
+  learning_analytics:
+    languageKey: module.learning
+    url: xapitracking.mookeen.dev
+    icon: fa-search
+    enabled: true
+    open_in: 1
+  book_publishing:
+    languageKey: module.booktype
+    url: bookpublishing.mookeen.dev
+    icon: fa-newspaper-o
+    enabled: true
+    open_in: 1
+  external_tools:
+    languageKey: module.external-tools
+    url: schoolmanagement.mookeen.dev/mookeen.php?q=/modules/Mookeen/External%20Tools/external_tools.php
+    icon: fa-sign-out
+    enabled: true
+    open_in: 1

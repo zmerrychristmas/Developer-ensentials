@@ -1,0 +1,202 @@
+.panel-box{
+  background: #ffffff;
+  padding: 10px 20px 20px;
+  border: transparent;
+  border-radius: 0;
+  margin-top: 20px;
+  .panel-heading{
+    background: #ffffff;
+    padding-left: 0;
+    .panel-title{
+      font-size: 24px;
+    }
+  }
+  .table-header{
+    margin: 20px 0;
+    label{
+      margin-right: 30px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .header-row{
+      margin: 20px 0;
+    }
+  }
+  .table{
+    font-weight: 500;
+    color: #000000;
+    th{
+      font-weight: 500px; 
+      border-bottom-width: 1px;
+    }
+    .progress{
+      width: 70px;
+      float: left;
+      margin-left: 5px;
+      border-radius: 0;
+      background: #ffffff;
+      box-shadow: none;
+      .progress-bar{
+        border-radius: 0;
+        &.progress-bar-danger{
+          background: #ee342c;
+        }
+      }
+    }
+    td{
+      input[type=checkbox], input[type=radio]{
+        border-color: #ddd;
+        background: #ffffff
+      }
+    }
+  }
+}
+#modalEditor{
+  @media (min-width: 992px){
+    .modal-lg {
+        width: 970px;
+    }
+  }
+  .modal-content{
+    border-radius: 0;
+    .editor-toolbar{
+      .table-bordered{
+        border-width: 0;
+        margin-bottom: 0;
+        td{
+          border-top: 0;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          &:first-child{
+            border-left: 0;
+          }
+          &:last-child{
+            border-right: 0;
+          }
+        }
+      }
+      color: #ffffff;
+      a{
+        color: #ffffff;
+      }
+      background: $primaryColor;
+    }
+    .editor-header{
+      padding: 5px 0;
+      background: #f2f2f2;
+      .col-info{
+        padding-top: 3px;
+        h3{
+          margin: 0;
+          padding: 0;
+          color: #000000;
+          font-size: 18px;
+        }
+        p{
+          color: #8e8e8e;
+          font-size: 12px;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      .col-number{
+        padding-top: 3px;
+        h3{
+          margin: 0;
+          padding: 0;
+          color: #000000;
+          font-size: 22px;
+        }
+        p{
+          color: #8e8e8e;
+          font-size: 12px;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+      .btn{
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+    .col-right, .col-left{
+      padding: 0;
+    }
+    .col-right{
+      width: 30%;
+    }
+    .source-list{
+      position: relative;
+      height: 408px;
+      .source-list-header{
+        font-size: 16px;
+        background: $primaryColor;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        color: #ffffff;
+        text-align: right;
+        h3{
+          float: left;
+          margin: 10px;
+          padding: 0;
+          font-size: 18px;
+        }
+        .btn{
+          margin-top: 5px;
+          margin-right: 5px;
+        }
+      }
+      .source-list-footer{
+        background: #e6e6e6;
+        padding: 10px;
+        position: absolute;
+        bottom:0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        text-align: center;
+      }
+      .source-list-body{
+        position: absolute;
+        top: 40px;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        .total-of-list{
+          text-align: center;
+          overflow: hidden;
+          background: #707495;
+          color: #ffffff;
+          .btn-link{
+            color: #ffffff;
+          }
+          span{
+            display: inline-block;
+            padding-top: 4px;    
+          }
+        }
+        .proccess-item{
+          color: #000000;
+          overflow: hidden;
+          h4{
+            margin: 0;
+            padding: 0;
+          }
+          p{
+            margin: 0;
+          }
+          .index-progress{
+            font-size: 24px;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

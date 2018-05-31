@@ -1,0 +1,22 @@
+module.schoolmanagement: School management
+module.courseeditor: course editor
+module.e-portfolio: e-portfolio
+module.learningplatform: learning platform
+module.eventsconferences: Events / Conferences
+module.onlineshop: online shop
+module.library: library
+module.e-assessment: e-assessment
+module.alumni: alumni
+module.plagiarism: plagiarism checker
+module.helpdesk: Helpdesk
+module.website: website
+module.learning: learning analytics
+module.booktype: book publishing
+module.external-tools: external tools
+user:
+  profile: 'Profile'
+  my_favourite: 'My favourite'
+  setting: 'Setting'
+  sign_out: 'Sign out'
+  my_tools: 'My tools'
+home: 'Home'

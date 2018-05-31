@@ -1,0 +1,40 @@
+<div class="menu-bar menu-collapsed">
+  <div class="menu-header">
+    <a class="menu-logo" href="#">
+      <img src="{{ asset('assets/images/aic-logo.png') }}" alt="AIC-Group"/>
+    </a>
+  </div>
+  <div class="container-fluid">
+    <div class="row main-menu">
+      {% for module in modules %}
+        {% if locale == 'vi' %}
+          {% set url = path('vi__RG__app_module', {'name':module.name}) %}
+        {% elseif locale == 'fr' %}
+          {% set url = path('fr__RG__app_module', {'name':module.name}) %}
+        {% else %}
+          {% set url = path('en__RG__app_module', {'name':module.name}) %}
+        {% endif %}
+        {% if module.languageKey == 'module.e-portfolio' or module.languageKey == 'module.learningplatform' %}
+          {% set url = module.url %}
+          {% if 'http://' not in url and 'https://' not in url %}
+            {% set  url = 'http://' ~ url %}
+          {% endif %}
+        {% endif %}
+        <div class="col-sm-3 col-xs-4">
+          <a class="menu-item" href="{{ url }}">
+            <i class="fa {{ module.icon }} fa-2x"></i>
+            <span class="menu-label">{{ module.languageKey | trans | capitalize }}</span>
+          </a>
+        </div>
+      {% endfor %}
+      <!-- Menu item -->
+      <div class="col-sm-3 col-xs-4">
+          <a class="menu-item" href="/">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="menu-label">{{ 'home' | trans }}</span>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-shadow hide"></div>

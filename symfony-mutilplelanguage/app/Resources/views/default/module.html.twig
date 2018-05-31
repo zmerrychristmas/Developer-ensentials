@@ -1,0 +1,56 @@
+{% extends 'mookeen.layout.html.twig' %}
+
+{% block stylesheets %}
+  <link href="{{ asset('/assets/css/module.css') }}" rel="stylesheet" type="text/css" />
+{% endblock stylesheets %}
+{% block js_headers %}
+{% endblock js_headers %}
+
+{% block content %}
+    {% set url = '' %}
+    {% if 'http://' in module.url or 'https://' in module.url %}
+    {% set url = module.url %}
+    {% else %}
+      {% set url = "http://#{module.url}" %}
+    {% endif %}
+    <section id="homePage" class="main-container">
+      <!-- Container header -->
+      <iframe src="{{ url }}" width="100%" height="100%" id="iframeModule"></iframe>
+    </section>
+
+    <footer class="footer">
+      <div class="text-center">
+        <p>&copy; MooKeen by EM Normandie</p>
+      </div>
+    </footer>
+    <div id="fb-root"></div>
+{% endblock content %}
+{% block javascripts %}
+    <!-- jQuery -->
+    <script src="{{ asset('/assets/js/jquery.js') }}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="{{ asset('/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/main.js') }}"></script>
+    <!-- Social networks -->
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=290338634401427";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+    $('#language-box').on('change', function(ev) {
+      var value = $('#language-box :selected').val();
+      if (value != 'en') {
+        location.href = '/' + value;
+      } else {
+        location.href = '/';
+      }
+    });
+    $(document).ready(function() {
+
+    });
+    </script>
+{% endblock javascripts %}

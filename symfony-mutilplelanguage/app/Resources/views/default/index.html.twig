@@ -1,0 +1,160 @@
+{% extends 'mookeen.layout.html.twig' %}
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+{% block js_headers %}
+{% endblock js_headers %}
+
+{% block content %}
+
+
+    <section id="homePage" class="main-container">
+      <!-- Container header -->
+      <div class="home-header">
+        <div class="media">
+          <div class="media-left">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="/assets/images/aic-logo.png" alt="AIC-Group"/>
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ 'user.my_tools' | trans }}</h4>
+          </div>
+        </div>
+      </div>
+      <!-- Container body -->
+      <div class="main-body container-fluid">
+        <div class="row main-menu">
+            {% for module in modules %}
+              {% if module.openIn %}
+                {% if locale == 'vi' %}
+                  {% set url = path('vi__RG__app_module', {'name':module.name}) %}
+                {% elseif locale == 'fr' %}
+                  {% set url = path('fr__RG__app_module', {'name':module.name}) %}
+                {% else  %}
+                  {% set url = path('en__RG__app_module', {'name':module.name}) %}
+                {% endif %}
+              {% else %}
+                {% set url = module.url %}
+                {% if 'http://' not in url and 'https://' not in url %}
+                  {% set  url = 'http://' ~ url %}
+                {% endif %}
+              {% endif %}
+              <div class="col-md-2 col-sm-3 col-xs-4">
+                  <a class="menu-item" href="{{ url }}" id="module-{{ module.id }}">
+                    <i class="fa {{ module.icon }} fa-3x"></i>
+                    <span class="menu-label">{{ module.languageKey | trans | capitalize }}</span>
+                  </a>
+              </div>
+            {% endfor %}
+        </div>
+
+        <!-- Social networks -->
+        <div class="row social-networks">
+          <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-plagiarism-checker.htmlprimary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Elgg</a></li>
+                      <li><a href="#">Youtube</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="fb-page" data-href="https://www.facebook.com/EMNormandie/" data-tabs="timeline" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+                      <blockquote cite="https://www.facebook.com/EMNormandie/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/EMNormandie/">EM Normandie</a>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Elgg</a></li>
+                      <li><a href="#">Youtube</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                  </div>
+                  <div class="social-cover">
+                    <a class="twitter-timeline" data-width="100%" data-height="492" href="https://twitter.com/EMNormandie">Tweets by EMNormandie</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Elgg</a></li>
+                      <li><a href="#">Youtube</a></li>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                  </div>
+                  <div class="social-cover">
+                    <iframe src='https://www.displaysocialmedia.com/app/embed/index.php?embed_id=2341' frameborder='0' width='100%' height='495'></iframe>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="text-center">
+        <p>&copy; MooKeen by EM Normandie</p>
+      </div>
+    </footer>
+    <div id="fb-root"></div>
+{% endblock content %}
+{% block javascripts %}
+    <!-- jQuery -->
+    <script src="{{ asset('/assets/js/jquery.js') }}"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="{{ asset('/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/main.js') }}"></script>
+    <!-- Social networks -->
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.9&appId=290338634401427";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+    $('#language-box').on('change', function(ev) {
+      var value = $('#language-box :selected').val();
+      if (value != 'en') {
+        location.href = '/' + value;
+      } else {
+        location.href = '/';
+      }
+    });
+    </script>
+{% endblock javascripts %}

@@ -1,0 +1,43 @@
+{% if header is not defined %}
+  {% set header = 'home' %}
+{% endif %}
+{% if user_name is not defined %}
+  {% set user_name = 'Guest' %}
+{% endif %}
+{% if img_path is not defined %}
+  {% set img_path = asset('/assets/images/profile10.png') %}
+{% endif %}
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="cursor-pointer" id="btn-menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a class="logo" href="{{ path('homepage') }}"><img src="{{ asset('assets/images/logo.png') }}"/></a>
+        <a class="m-breadcrumb">{{ header | trans }}</a>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="language-box">
+                <select class="form-control" id="language-box">
+                    <option value="en" {% if locale == "en" %}selected{% endif %}>English</option>
+                    <option value="fr" {% if locale == 'fr' %}selected{% endif %}>French</option>
+                    <option value="vi" {% if locale == 'vi' %}selected{% endif %}>Tiếng Việt</option>
+                </select>
+            </li>
+            <li class="dropdown user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="avatar-circle small">
+                    <img src="{{ img_path }}" class="square"/>
+                </span>
+                <span class="btn-label">
+                    {{ user_name }} <span class="caret"></span>
+                </span>
+                </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#">{{ 'user.profile' | trans }}</a></li>
+              <li><a href="#">{{ 'user.my_favourite' | trans }}</a></li>
+              <li><a href="#" {{ 'user.setting' | trans }}></a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{{ path('fos_user_security_logout') }}">{{ 'user.sign_out' | trans }}</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+</header>
